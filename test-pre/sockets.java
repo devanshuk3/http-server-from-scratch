@@ -14,7 +14,7 @@ public class sockets {
 
                     BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
                      
-                    PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
+                    //PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
 
                     String line;
                     
