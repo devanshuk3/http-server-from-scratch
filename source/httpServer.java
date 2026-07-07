@@ -21,7 +21,8 @@ public class httpServer {
         String requestLine = reader.readLine();
         String [] parts = requestLine.split(" ");
         String method = parts[0];
-       String path = parts[1];
+
+        String path = parts[1];
         String version = parts[2];
         System.out.println("Method: " + method);
         System.out.println("Path" + path);
@@ -45,13 +46,13 @@ public class httpServer {
         System.out.println("Connection - " + headers.get("Connection"));
 
 
-
+        String req = "<html><head> <title> devanshuuuu</title></head><body><h1>Hallooooo</h1></body></html>";
         PrintWriter writer = new PrintWriter(client.getOutputStream());
         writer.print("HTTP/1.1 200 OK\r\n");
-        writer.print("Content-Type: text/plain\r\n");
-        writer.print("Content-Length: 15\r\n");
+        writer.print("Content-Type: text/html\r\n");
+        writer.print("Content-Length: req.length()\r\n");
         writer.print("\r\n");
-        writer.print("Hello World!!!!!");
+        writer.print(req);
 
         writer.flush();
         server.close();
