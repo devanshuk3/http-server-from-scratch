@@ -15,3 +15,5 @@ These implementations are only for the general understanding and can be complete
 **5/7/26**: Started with the prerequisites of the underlying fundamentals for building a web server. It includes sockets, buffer readers and stream readers, Input and output streams, String functions and String Builders.
 
 **6/7/26**: Added a basic working prototype of a web server. It reads the requests from the browser through inputStreamReader and then, that data is parsed into parts by splitting the first line of the headers. Those headers alongwith the entire request are then printed on the console.
+
+**7/7/26**: After the parsing of request line finishes in String parts, the following request headers are parsed into the declared hashmap as keys and values, which are then showed on the terminal. 
