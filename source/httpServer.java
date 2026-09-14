@@ -15,7 +15,7 @@ public class httpServer {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
 
-        String line;
+        String line;    
         //The lines below are for taking the values in strings 
         //and then printing them on the console.
         String requestLine = reader.readLine();
@@ -24,7 +24,7 @@ public class httpServer {
 
         String path = parts[1];
         String version = parts[2];
-        System.out.println("Method: " + method);
+        System.out.println("Method: '" + method);
         System.out.println("Path" + path);
         System.out.println("Version: " + version);
 
@@ -36,11 +36,8 @@ public class httpServer {
            // System.out.println(seperator);
             String key = line.substring(0, seperator).trim();
             String value = line.substring(seperator + 1).trim();
-
             headers.put(key, value);
         }
-
-
         System.out.println("Host - " + headers.get("Host"));
         System.out.println("User-Agent - " + headers.get("User-Agent"));
         System.out.println("Connection - " + headers.get("Connection"));
