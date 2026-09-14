@@ -10,10 +10,12 @@ It contains the basic implementations of the fundamental concepts like websocket
 These implementations are only for the general understanding and can be completely skipped accordingly.
 
 
-## Date Wise Updates: 
+## Updates logs: 
 
 **5/7/26**: Started with the prerequisites of the underlying fundamentals for building a web server. It includes sockets, buffer readers and stream readers, Input and output streams, String functions and String Builders.
 
 **6/7/26**: Added a basic working prototype of a web server. It reads the requests from the browser through inputStreamReader and then, that data is parsed into parts by splitting the first line of the headers. Those headers alongwith the entire request are then printed on the console.
 
 **7/7/26**: After the parsing of request line finishes in String parts, the following request headers are parsed into the declared hashmap as keys and values, which are then showed on the terminal. The string can be replaced with an html file syntax to render it out on the webpage.
+
+**14/09/26**: Wrote the program in C language from scratch with manual html file handling.
